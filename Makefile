@@ -71,7 +71,7 @@ archive:
 vendor-archive:
 	go_vendor_archive create --config ./tools/go-vendor-tools.toml weldr-client.spec
 	go_vendor_license --config ./tools/go-vendor-tools.toml --path weldr-client.spec \
-		report --update-spec --prompt --autofill=auto
+		report --verify-spec
 
 RPM_SPECFILE=rpmbuild/SPECS/weldr-client.spec
 RPM_TARBALL=rpmbuild/SOURCES/weldr-client-$(VERSION).tar.gz
